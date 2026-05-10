@@ -270,14 +270,15 @@ interface DitheringShaderProps {
 }
 
 function hexToRgba(hex: string): [number, number, number, number] {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+  if (hex === "transparent") return [0, 0, 0, 0]
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i.exec(hex)
   if (!result) return [0, 0, 0, 1]
 
   return [
     Number.parseInt(result[1], 16) / 255,
     Number.parseInt(result[2], 16) / 255,
     Number.parseInt(result[3], 16) / 255,
-    1,
+    result[4] ? Number.parseInt(result[4], 16) / 255 : 1,
   ]
 }
 
@@ -438,8 +439,11 @@ export function DitheringShader({
       className={className}
       style={{
         position: "relative",
-        width,
-        height,
+        width: "100%",
+        height: "auto",
+        aspectRatio: `${width} / ${height}`,
+        maxWidth: width,
+        maxHeight: height,
         ...style,
       }}
     >

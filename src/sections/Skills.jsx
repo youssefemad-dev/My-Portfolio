@@ -135,7 +135,7 @@ function Skills() {
             >
               {/* Planet canvas */}
               <div
-                className="w-44 h-44 mb-4 rounded-full overflow-hidden transition-all duration-500 border-2 border-gray-700 skill-planet"
+                className="w-44 h-44 mb-4 rounded-full border-2 border-gray-700 skill-planet relative"
                 style={{
                   "--glow-color": skill.colors.glow,
                 }}
@@ -181,14 +181,27 @@ function Skills() {
       <style jsx>{`
         .skill-planet {
           border-color: rgba(107, 114, 128, 0.5);
-          box-shadow: none;
+          transition: border-color 0.3s ease;
+        }
+
+        .skill-planet::before {
+          content: "";
+          position: absolute;
+          inset: -2px;
+          border-radius: inherit;
+          box-shadow: 0 0 24px 4px var(--glow-color), 0 0 8px 2px var(--glow-color);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          pointer-events: none;
+          z-index: -1;
         }
 
         .skill-planet:hover {
           border-color: var(--glow-color);
-          box-shadow:
-            0 0 24px 4px var(--glow-color),
-            0 0 8px 2px var(--glow-color);
+        }
+
+        .skill-planet:hover::before {
+          opacity: 1;
         }
       `}</style>
     </div>

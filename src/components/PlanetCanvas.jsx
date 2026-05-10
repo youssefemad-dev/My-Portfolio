@@ -109,7 +109,7 @@ const PlanetCanvas = ({ icon, colors, hasRing }) => {
           dpr={1}
           camera={{ position: [0, 0, 3.2], fov: 60 }}
           gl={{ antialias: false, alpha: true }}
-          style={{ width: "100%", height: "100%", display: "block" }}
+          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "block" }}
         >
           <Suspense fallback={null}>
             {/* Key lights */}
