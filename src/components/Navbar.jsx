@@ -17,7 +17,6 @@ export function Navbar() {
     { label: "Home", href: "#" },
     { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
   ];
 
   return (

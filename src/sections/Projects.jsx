@@ -8,6 +8,28 @@ import goEfficientImg from "@/assets/go-efficient.JPG";
 import aiResumeImg from "@/assets/ai-resume-analyzer.JPG";
 
 const projects = [
+    {
+    title: "AI Resume Analyzer",
+    description:
+      "An AI-powered tool that analyzes resumes and provides actionable feedback, keyword matching scores, and improvement suggestions.",
+    image: aiResumeImg,
+    link: "https://ai-resume-analyzerz.netlify.app/",
+    tags: ["React", "Integrated AI", "Tailwind CSS", "TypeScript"],
+    accentColor: "#fb923c",
+    glowColor: "rgba(251,146,60,0.35)",
+    nebulaColor: "rgba(251,146,60,0.09)",
+  },
+    {
+    title: "Go Efficient",
+    description:
+      "A productivity-focused web app that helps users streamline daily workflows with intuitive tools and a sleek, distraction-free interface.",
+    image: goEfficientImg,
+    link: "https://go-efficient.netlify.app/",
+    tags: ["React", "BootStrap CSS", "Vite"],
+    accentColor: "#34d399",
+    glowColor: "rgba(52,211,153,0.35)",
+    nebulaColor: "rgba(52,211,153,0.10)",
+  },
   {
     title: "Omori Calculator",
     description:
@@ -29,29 +51,7 @@ const projects = [
     accentColor: "#38bdf8",
     glowColor: "rgba(56,189,248,0.35)",
     nebulaColor: "rgba(14,165,233,0.12)",
-  },
-  {
-    title: "Go Efficient",
-    description:
-      "A productivity-focused web app that helps users streamline daily workflows with intuitive tools and a sleek, distraction-free interface.",
-    image: goEfficientImg,
-    link: "https://go-efficient.netlify.app/",
-    tags: ["React", "BootStrap CSS", "Vite"],
-    accentColor: "#34d399",
-    glowColor: "rgba(52,211,153,0.35)",
-    nebulaColor: "rgba(52,211,153,0.10)",
-  },
-  {
-    title: "AI Resume Analyzer",
-    description:
-      "An AI-powered tool that analyzes resumes and provides actionable feedback, keyword matching scores, and improvement suggestions.",
-    image: aiResumeImg,
-    link: "https://ai-resume-analyzerz.netlify.app/",
-    tags: ["React", "Integrated AI", "Tailwind CSS", "TypeScript"],
-    accentColor: "#fb923c",
-    glowColor: "rgba(251,146,60,0.35)",
-    nebulaColor: "rgba(251,146,60,0.09)",
-  },
+  }
 ];
 
 /* ── Purely CSS-driven rocket button — zero JS state ── */
