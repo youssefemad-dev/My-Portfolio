@@ -7,12 +7,17 @@ function Hero() {
       <div className="flex-1 pr-0 md:pr-8 text-center md:text-left z-10">
         <h1 className="text-4xl md:text-5xl font-bold text-white flex flex-wrap justify-center md:justify-start items-center gap-[0.25em]">
           <EncryptedText text="Hi," />
-          <EncryptedText text="Youssef" className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400" />
+          <EncryptedText
+            text="Youssef"
+            className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400"
+          />
           <EncryptedText text="here." />
         </h1>
         <p className="py-6 text-white text-sm md:text-base max-w-2xl mx-auto md:mx-0">
-          I'm a front-end developer with a strong foundation in computer science, focused on building fast, clean, and user-friendly applications. I don't just write code—I solve problems and bring ideas to life through real projects. 
-          Currently growing my skills in JavaScript and modern web technologies while building projects that reflect real-world value.
+          I'm a Computer Science student with a strong foundation in web
+          development, focused on building fast, clean, and user-friendly
+          applications. I transform ideas into real, production-ready projects
+          using React, JavaScript, TypeScript, and modern web technologies.
         </p>
       </div>
       <div className="flex justify-center md:justify-end w-full max-w-[200px] sm:max-w-[250px] aspect-square md:aspect-auto md:max-w-none md:flex-1">

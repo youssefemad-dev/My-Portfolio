@@ -73,7 +73,7 @@ function Skills() {
       hasRing: false,
     },
     {
-      name: "Git",
+      name: "Git/Github",
       icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
       colors: {
         base: "#2d0a0a",
@@ -108,6 +108,30 @@ function Skills() {
       },
       hasRing: true,
     },
+    {
+      name: "Bootstrap",
+      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg",
+      colors: {
+        base: "#1a0a2e",
+        emissive: "#9333ea",
+        glow: "#a855f7",
+        specular: "#e9d5ff",
+        ring: "#a855f7",
+      },
+      hasRing: false,
+    },
+    {
+      name: "Python",
+      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+      colors: {
+        base: "#1a1a2e",
+        emissive: "#3b82f6",
+        glow: "#60a5fa",
+        specular: "#bfdbfe",
+        ring: "#60a5fa",
+      },
+      hasRing: true,
+    },
   ];
 
   return (
@@ -129,7 +153,7 @@ function Skills() {
           {skillsData.map((skill, index) => (
             <div
               key={index}
-              data-aos="zoom-in"
+              data-aos="fade-up"
               data-aos-delay={index * 100}
               className="flex flex-col items-center group"
             >
@@ -189,7 +213,9 @@ function Skills() {
           position: absolute;
           inset: -2px;
           border-radius: inherit;
-          box-shadow: 0 0 24px 4px var(--glow-color), 0 0 8px 2px var(--glow-color);
+          box-shadow:
+            0 0 24px 4px var(--glow-color),
+            0 0 8px 2px var(--glow-color);
           opacity: 0;
           transition: opacity 0.3s ease;
           pointer-events: none;

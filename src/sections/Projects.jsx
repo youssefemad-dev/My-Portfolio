@@ -3,11 +3,22 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import omoriImg from "@/assets/omori-calculator.JPG";
-import kanbanImg from "@/assets/kanban-task-management.JPG";
 import goEfficientImg from "@/assets/go-efficient.JPG";
 import aiResumeImg from "@/assets/ai-resume-analyzer.JPG";
+import algoBuddyImg from "@/assets/algoBuddy.JPG";
 
 const projects = [
+    {
+    title: "AlgoBuddy - Open Source Contribution",
+    description:
+      "Fixed dark mode UI/UX bug in AlgoBuddy, a Next.js/React educational platform. Implemented theme-aware styling for button components ensuring consistent visual design across light/dark modes.",
+    image: algoBuddyImg,
+    link: "https://github.com/Pankajtiwari034/AlgoBuddy/pull/20",
+    tags: ["React", "Next.js", "Open Source", "UI/UX"],
+    accentColor: "#10b981",
+    glowColor: "rgba(16,185,129,0.35)",
+    nebulaColor: "rgba(16,185,129,0.09)",
+  },
     {
     title: "AI Resume Analyzer",
     description:
@@ -26,9 +37,9 @@ const projects = [
     image: goEfficientImg,
     link: "https://go-efficient.netlify.app/",
     tags: ["React", "BootStrap CSS", "Vite"],
-    accentColor: "#34d399",
-    glowColor: "rgba(52,211,153,0.35)",
-    nebulaColor: "rgba(52,211,153,0.10)",
+    accentColor: "#38bdf8",
+    glowColor: "rgba(56,189,248,0.35)",
+    nebulaColor: "rgba(14,165,233,0.12)",
   },
   {
     title: "Omori Calculator",
@@ -40,17 +51,6 @@ const projects = [
     accentColor: "#a78bfa",
     glowColor: "rgba(167,139,250,0.35)",
     nebulaColor: "rgba(99,40,220,0.12)",
-  },
-  {
-    title: "Kanban Task Manager",
-    description:
-      "A drag-and-drop Kanban board for managing tasks across columns. Full CRUD functionality with persistent state and a clean UI.",
-    image: kanbanImg,
-    link: "https://kanban-task-manager1.netlify.app/#",
-    tags: ["React", "Tailwind", "State Management"],
-    accentColor: "#38bdf8",
-    glowColor: "rgba(56,189,248,0.35)",
-    nebulaColor: "rgba(14,165,233,0.12)",
   }
 ];
 

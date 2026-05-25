@@ -2,6 +2,7 @@ import Hero from "./sections/Hero";
 import { Navbar } from "@/components/Navbar";
 import { StarsBackground } from "@/components/ui/stars-background";
 import Skills from "./sections/Skills";
+import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 
@@ -14,6 +15,7 @@ function App() {
       <div className="relative z-10 w-full">
         <Hero />
         <Skills />
+        <Experience />
         <Projects />
         <Contact />
       </div>
