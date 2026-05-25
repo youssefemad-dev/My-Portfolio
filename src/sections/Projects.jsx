@@ -8,7 +8,7 @@ import aiResumeImg from "@/assets/ai-resume-analyzer.JPG";
 import algoBuddyImg from "@/assets/algoBuddy.JPG";
 
 const projects = [
-    {
+  {
     title: "AlgoBuddy - Open Source Contribution",
     description:
       "Fixed dark mode UI/UX bug in AlgoBuddy, a Next.js/React educational platform. Implemented theme-aware styling for button components ensuring consistent visual design across light/dark modes.",
@@ -19,7 +19,7 @@ const projects = [
     glowColor: "rgba(16,185,129,0.35)",
     nebulaColor: "rgba(16,185,129,0.09)",
   },
-    {
+  {
     title: "AI Resume Analyzer",
     description:
       "An AI-powered tool that analyzes resumes and provides actionable feedback, keyword matching scores, and improvement suggestions.",
@@ -30,7 +30,7 @@ const projects = [
     glowColor: "rgba(251,146,60,0.35)",
     nebulaColor: "rgba(251,146,60,0.09)",
   },
-    {
+  {
     title: "Go Efficient",
     description:
       "A productivity-focused web app that helps users streamline daily workflows with intuitive tools and a sleek, distraction-free interface.",
@@ -51,7 +51,7 @@ const projects = [
     accentColor: "#a78bfa",
     glowColor: "rgba(167,139,250,0.35)",
     nebulaColor: "rgba(99,40,220,0.12)",
-  }
+  },
 ];
 
 /* ── Purely CSS-driven rocket button — zero JS state ── */
@@ -75,7 +75,7 @@ function Projects() {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      once: true,         // animate only once → no re-calc on scroll-back
+      once: true, // animate only once → no re-calc on scroll-back
       throttleDelay: 99,
       offset: 60,
     });
@@ -87,7 +87,10 @@ function Projects() {
       className="projects-section relative w-full min-h-screen py-24 px-6 overflow-hidden"
     >
       {/* ── Static nebula blobs (CSS-animated, GPU composited) ── */}
-      <div className="absolute inset-0 pointer-events-none z-0" aria-hidden="true">
+      <div
+        className="absolute inset-0 pointer-events-none z-0"
+        aria-hidden="true"
+      >
         <div className="nebula-blob blob-1" />
         <div className="nebula-blob blob-2" />
         {/* Shooting stars */}
@@ -163,7 +166,9 @@ function Projects() {
               </div>
 
               {/* Corner star */}
-              <span className="corner-star" aria-hidden="true">✦</span>
+              <span className="corner-star" aria-hidden="true">
+                ✦
+              </span>
             </div>
           ))}
         </div>
@@ -172,7 +177,9 @@ function Projects() {
         <div className="text-center mt-20" data-aos="fade-up">
           <p className="text-gray-500 text-sm">
             More projects launching soon
-            <span className="inline-block ml-2 text-cyan-400 animate-pulse">🛸</span>
+            <span className="inline-block ml-2 text-cyan-400 animate-pulse">
+              🛸
+            </span>
           </p>
         </div>
       </div>

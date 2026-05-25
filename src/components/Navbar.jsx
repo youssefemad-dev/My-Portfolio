@@ -90,7 +90,10 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
           <div className="flex-shrink-0">
-            <a href="/" className="nav-brand text-2xl font-bold flex items-center">
+            <a
+              href="/"
+              className="nav-brand text-2xl font-bold flex items-center"
+            >
               <span className="text-white mr-2">✦</span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
                 Youssef Emad
@@ -113,7 +116,10 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#contact" className="menu-button px-4 py-2 rounded-lg border border-cyan-400/50 text-cyan-300 hover:text-cyan-200 hover:border-cyan-300 transition-all duration-300 text-sm font-medium bg-cyan-400/5 hover:bg-cyan-400/10">
+            <a
+              href="#contact"
+              className="menu-button px-4 py-2 rounded-lg border border-cyan-400/50 text-cyan-300 hover:text-cyan-200 hover:border-cyan-300 transition-all duration-300 text-sm font-medium bg-cyan-400/5 hover:bg-cyan-400/10"
+            >
               Get In Touch
             </a>
           </div>
@@ -148,7 +154,11 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a href="#contact" onClick={() => setIsOpen(false)} className="w-full mt-4 px-4 py-2 rounded-lg border border-cyan-400/50 text-cyan-300 hover:text-cyan-200 hover:border-cyan-300 transition-all duration-300 text-sm font-medium bg-cyan-400/5 hover:bg-cyan-400/10 text-center block">
+            <a
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+              className="w-full mt-4 px-4 py-2 rounded-lg border border-cyan-400/50 text-cyan-300 hover:text-cyan-200 hover:border-cyan-300 transition-all duration-300 text-sm font-medium bg-cyan-400/5 hover:bg-cyan-400/10 text-center block"
+            >
               Get In Touch
             </a>
           </div>

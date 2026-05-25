@@ -18,7 +18,7 @@ const experiences = [
   },
   {
     title: "Facilitator & Counselor",
-    company: "Remail Adventure",
+    company: "Remal Adventures Egypt ",
     period: "September 2025 - Present",
     description:
       "Leading team-building workshops and fostering strong communication within groups.",
