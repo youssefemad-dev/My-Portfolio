@@ -120,18 +120,6 @@ function Skills() {
       },
       hasRing: false,
     },
-    {
-      name: "Python",
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
-      colors: {
-        base: "#1a1a2e",
-        emissive: "#3b82f6",
-        glow: "#60a5fa",
-        specular: "#bfdbfe",
-        ring: "#60a5fa",
-      },
-      hasRing: true,
-    },
   ];
 
   return (
