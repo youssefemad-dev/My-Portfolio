@@ -25,7 +25,7 @@ const projects = [
     description:
       "An AI-powered tool that analyzes resumes and provides actionable feedback, keyword matching scores, and improvement suggestions.",
     image: aiResumeImg,
-    link: "https://ai-resume-analyzerz.netlify.app/",
+    link: "ai-resume-analyzer-mvk89rseo-youssef-988e.vercel.app",
     tags: ["React", "Integrated AI", "Tailwind CSS", "TypeScript"],
     accentColor: "#fb923c",
     glowColor: "rgba(251,146,60,0.35)",
@@ -36,29 +36,18 @@ const projects = [
     description:
       "A productivity-focused web app that helps users streamline daily workflows with intuitive tools and a sleek, distraction-free interface.",
     image: goEfficientImg,
-    link: "https://go-efficient.netlify.app/",
+    link: "goefficient-5edaxnyzo-youssef-988e.vercel.app",
     tags: ["React", "BootStrap CSS", "Vite"],
     accentColor: "#38bdf8",
     glowColor: "rgba(56,189,248,0.35)",
     nebulaColor: "rgba(14,165,233,0.12)",
   },
   {
-    title: "Ancient Egypt Interactive Experience",
-    description:
-      "An immersive, browser-based educational platform that transports users to the world of Ancient Egypt. The experience blends 3D visualization, gamified discovery, and rich historical content to make learning about Egyptian culture, mythology, and daily life engaging and memorable.",
-    image: egyptImg,
-    link: "https://ancient-egypt-interactive-experience.netlify.app/",
-    tags: ["React", "Tailwind", "TypeScript"],
-    accentColor: "#a78bfa",
-    glowColor: "rgba(167,139,250,0.35)",
-    nebulaColor: "rgba(99,40,220,0.12)",
-  },
-  {
     title: "RedBull Motion Experience",
     description:
       "The Red Bull Motion website is a high-performance marketing experience built to promote the new Red Bull Motion product. The site features advanced scroll animations, seamless transitions, and a modern, immersive design that captures the high-energy identity of the Red Bull brand.",
     image: redBullImg,
-    link: "https://redbullmotion.netlify.app/",
+    link: "redbull-motion-2gawgyen6-youssef-988e.vercel.app",
     tags: ["React", "Tailwind", "TypeScript"],
     accentColor: "#a78bfa",
     glowColor: "rgba(167,139,250,0.35)",
