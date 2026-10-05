@@ -10,11 +10,11 @@ import redBullImg from "@/assets/rebull motion.JPG";
 
 const projects = [
   {
-    title: "AlgoBuddy - Open Source Contribution",
+    title: "AlgoMate - Open Source Contribution",
     description:
-      "Fixed dark mode UI/UX bug in AlgoBuddy, a Next.js/React educational platform. Implemented theme-aware styling for button components ensuring consistent visual design across light/dark modes.",
+      "Fixed dark mode UI/UX bug in AlgoMate, a Next.js/React educational platform. Implemented theme-aware styling for button components ensuring consistent visual design across light/dark modes.",
     image: algoBuddyImg,
-    link: "https://github.com/Pankajtiwari034/AlgoBuddy/pull/20",
+    link: "https://github.com/PankajSingh18/AlgoMate/pull/20",
     tags: ["React", "Next.js", "Open Source", "UI/UX"],
     accentColor: "#10b981",
     glowColor: "rgba(16,185,129,0.35)",
