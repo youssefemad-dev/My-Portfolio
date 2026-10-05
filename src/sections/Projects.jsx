@@ -25,7 +25,7 @@ const projects = [
     description:
       "An AI-powered tool that analyzes resumes and provides actionable feedback, keyword matching scores, and improvement suggestions.",
     image: aiResumeImg,
-    link: "ai-resume-analyzer-mvk89rseo-youssef-988e.vercel.app",
+    link: "https://ai-resume-analyzer-sigma-one-48.vercel.app/",
     tags: ["React", "Integrated AI", "Tailwind CSS", "TypeScript"],
     accentColor: "#fb923c",
     glowColor: "rgba(251,146,60,0.35)",
@@ -36,7 +36,7 @@ const projects = [
     description:
       "A productivity-focused web app that helps users streamline daily workflows with intuitive tools and a sleek, distraction-free interface.",
     image: goEfficientImg,
-    link: "goefficient-5edaxnyzo-youssef-988e.vercel.app",
+    link: "https://goefficient.vercel.app/",
     tags: ["React", "BootStrap CSS", "Vite"],
     accentColor: "#38bdf8",
     glowColor: "rgba(56,189,248,0.35)",
@@ -47,7 +47,7 @@ const projects = [
     description:
       "The Red Bull Motion website is a high-performance marketing experience built to promote the new Red Bull Motion product. The site features advanced scroll animations, seamless transitions, and a modern, immersive design that captures the high-energy identity of the Red Bull brand.",
     image: redBullImg,
-    link: "redbull-motion-2gawgyen6-youssef-988e.vercel.app",
+    link: "https://redbull-motion.vercel.app/",
     tags: ["React", "Tailwind", "TypeScript"],
     accentColor: "#a78bfa",
     glowColor: "rgba(167,139,250,0.35)",
