@@ -7,8 +7,19 @@ import aiResumeImg from "@/assets/ai-resume-analyzer.JPG";
 import algoBuddyImg from "@/assets/algoBuddy.JPG";
 import egyptImg from "@/assets/egypt.JPG";
 import redBullImg from "@/assets/rebull motion.JPG";
+import merakiImg from "@/assets/meraki.JPG";
 
 const projects = [
+  {
+    title: "Meraki - AI Story-Based Movie Discovery",
+    description:
+      "A natural-language movie discovery experience that interprets a user's situation into story themes and references, then finds TMDB films whose plots echo it. Built with focused AI-agent exploration and implementation workflows, integrated through Git branches and validated with an end-to-end tested product flow.",
+    image: merakiImg,
+    tags: ["Next.js", "TypeScript", "NVIDIA LLM API", "TMDB", "Zod", "Jest"],
+    accentColor: "#34d399",
+    glowColor: "rgba(52,211,153,0.35)",
+    nebulaColor: "rgba(52,211,153,0.09)",
+  },
   {
     title: "AlgoMate - Open Source Contribution",
     description:
@@ -144,11 +155,13 @@ function Projects() {
               <div className="proj-body">
                 <div className="proj-header">
                   <h3 className="proj-title">{project.title}</h3>
-                  <RocketLinkButton
-                    href={project.link}
-                    accentColor={project.accentColor}
-                    glowColor={project.glowColor}
-                  />
+                  {project.link && (
+                    <RocketLinkButton
+                      href={project.link}
+                      accentColor={project.accentColor}
+                      glowColor={project.glowColor}
+                    />
+                  )}
                 </div>
 
                 <p className="proj-desc">{project.description}</p>
