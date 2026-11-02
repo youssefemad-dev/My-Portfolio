@@ -386,8 +386,29 @@ export function DitheringShader({
     canvas.height = height
     gl.viewport(0, 0, width, height)
 
+    // Intersection & Visibility state
+    let isVisible = true
+    let isTabVisible = !document.hidden
+
+    const checkAndAnimate = () => {
+      if (speed !== 0 && isVisible && isTabVisible && !animationRef.current) {
+        animationRef.current = requestAnimationFrame(render)
+      }
+    }
+
+    const stopAnimation = () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
+        animationRef.current = undefined
+      }
+    }
+
     // Animation loop
     const render = () => {
+      animationRef.current = undefined
+
+      if (!isVisible || !isTabVisible) return
+
       const currentTime = (Date.now() - startTimeRef.current) * 0.001 * speed
 
       const context = glRef.current
@@ -411,23 +432,40 @@ export function DitheringShader({
 
       context.drawArrays(context.TRIANGLES, 0, 6)
 
-      if (speed !== 0) {
+      if (speed !== 0 && isVisible && isTabVisible) {
         animationRef.current = requestAnimationFrame(render)
       }
     }
 
-    const startAnimation = () => {
-      if (speed !== 0) {
-        animationRef.current = requestAnimationFrame(render)
+    // Pause WebGL rendering when hero is scrolled out of viewport
+    const observer = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting
+      if (isVisible) {
+        checkAndAnimate()
+      } else {
+        stopAnimation()
+      }
+    }, { rootMargin: "100px" })
+
+    observer.observe(canvas)
+
+    // Pause when tab is switched
+    const handleVisibilityChange = () => {
+      isTabVisible = !document.hidden
+      if (isTabVisible && isVisible) {
+        checkAndAnimate()
+      } else {
+        stopAnimation()
       }
     }
 
-    startAnimation()
+    document.addEventListener("visibilitychange", handleVisibilityChange)
+    checkAndAnimate()
 
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current)
-      }
+      stopAnimation()
+      observer.disconnect()
+      document.removeEventListener("visibilitychange", handleVisibilityChange)
       if (glRef.current && programRef.current) {
         glRef.current.deleteProgram(programRef.current)
       }

@@ -105,30 +105,60 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let animationFrameId: number;
+    let animationFrameId: number | null = null;
+
+    const startAnimation = () => {
+      if (!animationFrameId && !document.hidden) {
+        animationFrameId = requestAnimationFrame(render);
+      }
+    };
+
+    const stopAnimation = () => {
+      if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+      }
+    };
 
     const render = () => {
+      animationFrameId = null;
+      if (document.hidden) return;
+
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      stars.forEach((star) => {
+      const now = Date.now() * 0.001;
+
+      for (let i = 0; i < stars.length; i++) {
+        const star = stars[i];
+        if (star.twinkleSpeed !== null) {
+          star.opacity =
+            0.5 + Math.abs(Math.sin(now / star.twinkleSpeed) * 0.5);
+        }
+
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
         ctx.fill();
+      }
 
-        if (star.twinkleSpeed !== null) {
-          star.opacity =
-            0.5 +
-            Math.abs(Math.sin((Date.now() * 0.001) / star.twinkleSpeed) * 0.5);
-        }
-      });
-
-      animationFrameId = requestAnimationFrame(render);
+      if (!document.hidden) {
+        animationFrameId = requestAnimationFrame(render);
+      }
     };
 
-    render();
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopAnimation();
+      } else {
+        startAnimation();
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    startAnimation();
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      stopAnimation();
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, [stars]);
 
