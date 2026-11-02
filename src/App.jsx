@@ -12,10 +12,10 @@ const Skills = lazy(() => import("./sections/Skills"));
 const Contact = lazy(() => import("./sections/Contact"));
 
 /**
- * Defers loading & evaluating heavy 3D chunks until the user scrolls within 400px.
+ * Defers loading & evaluating heavy 3D chunks until the user is near each section.
  * Prevents Three.js (880 kB) from downloading or blocking the main thread on initial load.
  */
-function ViewportGate({ children, minHeight = "600px", rootMargin = "400px" }) {
+function ViewportGate({ children, minHeight = "600px", rootMargin = "100px" }) {
   const [inView, setInView] = useState(false);
   const ref = useRef(null);
 
@@ -60,14 +60,14 @@ function App() {
       <Navbar />
       <div className="relative z-10 w-full">
         <Hero />
-        <ViewportGate minHeight="600px" rootMargin="400px">
+        <ViewportGate minHeight="600px" rootMargin="100px">
           <Suspense fallback={<div className="w-full min-h-[600px]" />}>
             <Skills />
           </Suspense>
         </ViewportGate>
         <Experience />
         <Projects />
-        <ViewportGate minHeight="600px" rootMargin="400px">
+        <ViewportGate minHeight="600px" rootMargin="100px">
           <Suspense fallback={<div className="w-full min-h-[600px]" />}>
             <Contact />
           </Suspense>
