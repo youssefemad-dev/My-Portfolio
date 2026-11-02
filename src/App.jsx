@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect } from "react";
+import { Suspense, lazy, useEffect, useState, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Hero from "./sections/Hero";
@@ -7,9 +7,42 @@ import { StarsBackground } from "@/components/ui/stars-background";
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 
-// Code-split heavy Three.js / WebGL sections to drastically reduce initial JS bundle size
+// Code-split heavy Three.js / WebGL sections
 const Skills = lazy(() => import("./sections/Skills"));
 const Contact = lazy(() => import("./sections/Contact"));
+
+/**
+ * Defers loading & evaluating heavy 3D chunks until the user scrolls within 400px.
+ * Prevents Three.js (880 kB) from downloading or blocking the main thread on initial load.
+ */
+function ViewportGate({ children, minHeight = "600px", rootMargin = "400px" }) {
+  const [inView, setInView] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [rootMargin]);
+
+  return (
+    <div ref={ref} style={{ minHeight }}>
+      {inView ? children : null}
+    </div>
+  );
+}
 
 function App() {
   useEffect(() => {
@@ -27,14 +60,18 @@ function App() {
       <Navbar />
       <div className="relative z-10 w-full">
         <Hero />
-        <Suspense fallback={<div className="w-full min-h-[600px]" />}>
-          <Skills />
-        </Suspense>
+        <ViewportGate minHeight="600px" rootMargin="400px">
+          <Suspense fallback={<div className="w-full min-h-[600px]" />}>
+            <Skills />
+          </Suspense>
+        </ViewportGate>
         <Experience />
         <Projects />
-        <Suspense fallback={<div className="w-full min-h-[600px]" />}>
-          <Contact />
-        </Suspense>
+        <ViewportGate minHeight="600px" rootMargin="400px">
+          <Suspense fallback={<div className="w-full min-h-[600px]" />}>
+            <Contact />
+          </Suspense>
+        </ViewportGate>
       </div>
     </div>
   );
