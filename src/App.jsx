@@ -25,7 +25,7 @@ function ViewportGate({ children, minHeight = "600px", rootMargin = "100px" }) {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.intersectionRatio > 0) {
           setInView(true);
           observer.disconnect();
         }
@@ -60,7 +60,7 @@ function App() {
       <Navbar />
       <div className="relative z-10 w-full">
         <Hero />
-        <ViewportGate minHeight="600px" rootMargin="100px">
+        <ViewportGate minHeight="600px" rootMargin="0px">
           <Suspense fallback={<div className="w-full min-h-[600px]" />}>
             <Skills />
           </Suspense>
