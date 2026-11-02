@@ -35,7 +35,7 @@ function Experience() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false,
+      once: true,
     });
   }, []);
 
@@ -154,28 +154,32 @@ function Experience() {
         }
 
         .exp-blob-1 {
-          width: 520px;
-          height: 520px;
+          width: 600px;
+          height: 600px;
           background: radial-gradient(
-            circle,
-            rgba(0, 184, 230, 0.12) 0%,
-            transparent 70%
+            circle closest-side,
+            rgba(0, 184, 230, 0.18) 0%,
+            rgba(0, 184, 230, 0.12) 25%,
+            rgba(0, 184, 230, 0.06) 50%,
+            rgba(0, 184, 230, 0.02) 75%,
+            transparent 100%
           );
-          filter: blur(72px);
           top: -80px;
           right: -160px;
           animation: driftExpA 25s ease-in-out infinite alternate;
         }
 
         .exp-blob-2 {
-          width: 420px;
-          height: 420px;
+          width: 500px;
+          height: 500px;
           background: radial-gradient(
-            circle,
-            rgba(99, 40, 220, 0.14) 0%,
-            transparent 70%
+            circle closest-side,
+            rgba(99, 40, 220, 0.18) 0%,
+            rgba(99, 40, 220, 0.12) 25%,
+            rgba(99, 40, 220, 0.06) 50%,
+            rgba(99, 40, 220, 0.02) 75%,
+            transparent 100%
           );
-          filter: blur(64px);
           bottom: -60px;
           left: -120px;
           animation: driftExpB 23s ease-in-out infinite alternate;

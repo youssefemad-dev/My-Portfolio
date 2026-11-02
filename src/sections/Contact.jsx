@@ -303,19 +303,32 @@ function Contact() {
         .contact-blob {
           position: absolute;
           border-radius: 50%;
-          filter: blur(80px);
           pointer-events: none;
           will-change: transform;
         }
         .cb-1 {
-          width: 480px; height: 480px;
-          background: radial-gradient(circle, rgba(14,165,233,0.14) 0%, transparent 70%);
+          width: 560px; height: 560px;
+          background: radial-gradient(
+            circle closest-side,
+            rgba(14,165,233,0.18) 0%,
+            rgba(14,165,233,0.12) 25%,
+            rgba(14,165,233,0.06) 50%,
+            rgba(14,165,233,0.02) 75%,
+            transparent 100%
+          );
           top: -80px; right: -120px;
           animation: driftCB1 22s ease-in-out infinite alternate;
         }
         .cb-2 {
-          width: 380px; height: 380px;
-          background: radial-gradient(circle, rgba(99,40,220,0.12) 0%, transparent 70%);
+          width: 460px; height: 460px;
+          background: radial-gradient(
+            circle closest-side,
+            rgba(99,40,220,0.16) 0%,
+            rgba(99,40,220,0.10) 25%,
+            rgba(99,40,220,0.05) 50%,
+            rgba(99,40,220,0.02) 75%,
+            transparent 100%
+          );
           bottom: 60px; left: -100px;
           animation: driftCB2 18s ease-in-out infinite alternate-reverse;
         }
@@ -575,10 +588,15 @@ function Contact() {
         }
         .earth-glow-ring {
           position: absolute;
-          width: 340px; height: 340px;
+          width: 360px; height: 360px;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 70%);
-          filter: blur(30px);
+          background: radial-gradient(
+            circle closest-side,
+            rgba(14,165,233,0.18) 0%,
+            rgba(14,165,233,0.10) 40%,
+            rgba(14,165,233,0.03) 70%,
+            transparent 100%
+          );
           pointer-events: none;
         }
         .earth-canvas-container {

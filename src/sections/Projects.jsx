@@ -211,16 +211,28 @@ function Projects() {
           pointer-events: none;
         }
         .blob-1 {
-          width: 520px; height: 520px;
-          background: radial-gradient(circle, rgba(99,40,220,0.16) 0%, transparent 70%);
-          filter: blur(72px);
+          width: 600px; height: 600px;
+          background: radial-gradient(
+            circle closest-side,
+            rgba(99,40,220,0.22) 0%,
+            rgba(99,40,220,0.15) 25%,
+            rgba(99,40,220,0.08) 50%,
+            rgba(99,40,220,0.02) 75%,
+            transparent 100%
+          );
           top: -80px; left: -160px;
           animation: driftA 20s ease-in-out infinite alternate;
         }
         .blob-2 {
-          width: 420px; height: 420px;
-          background: radial-gradient(circle, rgba(14,165,233,0.13) 0%, transparent 70%);
-          filter: blur(72px);
+          width: 500px; height: 500px;
+          background: radial-gradient(
+            circle closest-side,
+            rgba(14,165,233,0.18) 0%,
+            rgba(14,165,233,0.12) 25%,
+            rgba(14,165,233,0.06) 50%,
+            rgba(14,165,233,0.02) 75%,
+            transparent 100%
+          );
           bottom: 40px; right: -100px;
           animation: driftB 24s ease-in-out infinite alternate-reverse;
         }
