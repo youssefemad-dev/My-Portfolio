@@ -10,7 +10,7 @@ function Skills() {
   const skillsData = [
     {
       name: "React",
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+      icon: "/icons/react.svg",
       colors: {
         base: "#1a3a5c",
         emissive: "#0ea5e9",
@@ -22,7 +22,7 @@ function Skills() {
     },
     {
       name: "JavaScript",
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+      icon: "/icons/javascript.svg",
       colors: {
         base: "#3b2f00",
         emissive: "#eab308",
@@ -34,7 +34,7 @@ function Skills() {
     },
     {
       name: "Tailwind CSS",
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg",
+      icon: "/icons/tailwindcss.svg",
       colors: {
         base: "#0c3040",
         emissive: "#06b6d4",
@@ -46,7 +46,7 @@ function Skills() {
     },
     {
       name: "HTML5",
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+      icon: "/icons/html5.svg",
       colors: {
         base: "#3b1a0a",
         emissive: "#ea580c",
@@ -58,7 +58,7 @@ function Skills() {
     },
     {
       name: "CSS3",
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+      icon: "/icons/css3.svg",
       colors: {
         base: "#0a1a3b",
         emissive: "#2563eb",
@@ -70,7 +70,7 @@ function Skills() {
     },
     {
       name: "Git/Github",
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
+      icon: "/icons/git.svg",
       colors: {
         base: "#2d0a0a",
         emissive: "#dc2626",
@@ -82,7 +82,7 @@ function Skills() {
     },
     {
       name: "Vite",
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-plain.svg",
+      icon: "/icons/vite.svg",
       colors: {
         base: "#1a0a2e",
         emissive: "#7c3aed",
@@ -94,7 +94,7 @@ function Skills() {
     },
     {
       name: "TypeScript",
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+      icon: "/icons/typescript.svg",
       colors: {
         base: "#0a1f3b",
         emissive: "#2563eb",
@@ -106,7 +106,7 @@ function Skills() {
     },
     {
       name: "Bootstrap",
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg",
+      icon: "/icons/bootstrap.svg",
       colors: {
         base: "#1a0a2e",
         emissive: "#9333ea",

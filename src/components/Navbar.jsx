@@ -27,20 +27,6 @@ export function Navbar() {
           }
         }
 
-        @keyframes glow-pulse {
-          0%,
-          100% {
-            box-shadow:
-              0 0 10px rgba(21, 94, 137, 0.3),
-              inset 0 0 10px rgba(21, 94, 137, 0.1);
-          }
-          50% {
-            box-shadow:
-              0 0 20px rgba(21, 94, 137, 0.5),
-              inset 0 0 15px rgba(21, 94, 137, 0.2);
-          }
-        }
-
         .nav-brand {
           animation: float 3s ease-in-out infinite;
         }
@@ -73,7 +59,28 @@ export function Navbar() {
         }
 
         .menu-button {
-          animation: glow-pulse 2s ease-in-out infinite;
+          position: relative;
+          box-shadow: 0 0 10px rgba(21, 94, 137, 0.3), inset 0 0 10px rgba(21, 94, 137, 0.1);
+        }
+
+        .menu-button::before {
+          content: "";
+          position: absolute;
+          inset: -1px;
+          border-radius: inherit;
+          box-shadow: 0 0 20px rgba(21, 94, 137, 0.55), inset 0 0 15px rgba(21, 94, 137, 0.25);
+          opacity: 0.2;
+          pointer-events: none;
+          animation: glow-pulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow-pulse {
+          0% {
+            opacity: 0.15;
+          }
+          100% {
+            opacity: 0.85;
+          }
         }
       `}</style>
 
