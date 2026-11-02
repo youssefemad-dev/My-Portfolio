@@ -1,9 +1,8 @@
-import goEfficientImg from "@/assets/go-efficient.JPG";
-import aiResumeImg from "@/assets/ai-resume-analyzer.JPG";
-import algoBuddyImg from "@/assets/algoBuddy.JPG";
-import egyptImg from "@/assets/egypt.JPG";
-import redBullImg from "@/assets/rebull motion.JPG";
-import merakiImg from "@/assets/meraki.JPG";
+import goEfficientImg from "@/assets/go-efficient.webp";
+import aiResumeImg from "@/assets/ai-resume-analyzer.webp";
+import algoBuddyImg from "@/assets/algoBuddy.webp";
+import redBullImg from "@/assets/rebull motion.webp";
+import merakiImg from "@/assets/meraki.webp";
 
 const projects = [
   {
@@ -135,6 +134,8 @@ function Projects() {
                   className="proj-img"
                   loading="lazy"
                   decoding="async"
+                  width="600"
+                  height="340"
                 />
               </div>
 
@@ -285,7 +286,6 @@ function Projects() {
           border: 1px solid rgba(255,255,255,0.07);
           border-radius: 1rem;
           padding: 1.5rem;
-          will-change: transform;
           transition: transform 0.3s cubic-bezier(0.34,1.3,0.64,1), border-color 0.3s ease;
         }
 
@@ -305,6 +305,7 @@ function Projects() {
         }
 
         .project-card:hover {
+          will-change: transform;
           transform: translateY(-5px) scale(1.008);
           border-color: var(--card-accent, #a78bfa);
         }
@@ -319,6 +320,7 @@ function Projects() {
           overflow: hidden;
           border-radius: 0.75rem;
           margin-bottom: 1.25rem;
+          aspect-ratio: 16 / 9;
         }
         .proj-img-overlay {
           position: absolute;
@@ -330,14 +332,15 @@ function Projects() {
         .proj-img {
           display: block;
           width: 100%;
-          height: 210px;
+          height: 100%;
+          max-height: 220px;
           object-fit: cover;
           border-radius: 0.75rem;
           transition: transform 0.45s ease, filter 0.45s ease;
-          filter: brightness(0.82) saturate(1.1);
-          will-change: transform;
+          filter: brightness(0.85) saturate(1.1);
         }
         .project-card:hover .proj-img {
+          will-change: transform;
           transform: scale(1.04);
           filter: brightness(0.98) saturate(1.2);
         }
