@@ -1,14 +1,10 @@
 import { useEffect, Suspense } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import PlanetCanvas from "@/components/PlanetCanvas";
 
 function Skills() {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false,
-    });
+    AOS.refresh();
   }, []);
 
   const skillsData = [

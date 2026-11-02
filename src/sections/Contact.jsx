@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState, Suspense } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import EarthCanvas from "@/components/EarthCanvas";
 
 const SOCIAL_LINKS = [
@@ -61,7 +60,7 @@ function Contact() {
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
 
   useEffect(() => {
-    AOS.init({ duration: 800, once: true, throttleDelay: 99, offset: 60 });
+    AOS.refresh();
   }, []);
 
   const validate = () => {

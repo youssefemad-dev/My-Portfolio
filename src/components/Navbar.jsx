@@ -1,17 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
 
   const navLinks = [
     { label: "Home", href: "#" },

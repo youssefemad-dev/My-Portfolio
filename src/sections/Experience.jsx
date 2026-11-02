@@ -1,7 +1,3 @@
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 const experiences = [
   {
     title: "React Front-End Development Trainee",
@@ -32,13 +28,6 @@ const experiences = [
 ];
 
 function Experience() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
-
   return (
     <section
       id="experience"

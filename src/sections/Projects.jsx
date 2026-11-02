@@ -1,7 +1,3 @@
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 import goEfficientImg from "@/assets/go-efficient.JPG";
 import aiResumeImg from "@/assets/ai-resume-analyzer.JPG";
 import algoBuddyImg from "@/assets/algoBuddy.JPG";
@@ -84,15 +80,6 @@ function RocketLinkButton({ href, accentColor, glowColor }) {
 }
 
 function Projects() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true, // animate only once → no re-calc on scroll-back
-      throttleDelay: 99,
-      offset: 60,
-    });
-  }, []);
-
   return (
     <section
       id="projects"

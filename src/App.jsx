@@ -1,4 +1,6 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Hero from "./sections/Hero";
 import { Navbar } from "@/components/Navbar";
 import { StarsBackground } from "@/components/ui/stars-background";
@@ -10,6 +12,14 @@ const Skills = lazy(() => import("./sections/Skills"));
 const Contact = lazy(() => import("./sections/Contact"));
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 60,
+      throttleDelay: 99,
+    });
+  }, []);
   return (
     <div className="relative w-full bg-neutral-950">
       {/* Single stars background that covers the entire page */}
